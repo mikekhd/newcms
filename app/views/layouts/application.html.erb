@@ -7,8 +7,75 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+		<div id="wrapper">
+			<div id="header">
+				<div id="logo">
+					<h1><a href="#">Axiom</a></h1>
+				</div>
+				<div id="menu">
+					<ul>
+						<li><%= link_to"Homepage", page_path(:homepage), class:"first current_page_item" %></a></li>
+						<li><%= link_to "Photos", page_path(:photos) %></a></li>
+						<li><%= link_to "Blog", page_path(:blog)%></a></li>
+						<li><%= link_to "About",page_path(:about)%></a></li>
+						<li><%= link_to "Links", page_path(:links)%></a></li>
+						<li><%= link_to "Contact", new_contact_path, class: "last" %></a></li>
+					</ul>
+					<br class="clearfix" />
+				</div>
+			</div>
+			<div id="inner">
+				<div id="splash">
+					<%= image_tag "banner.jpg" , width:"900" , height:"260" , alt:"", class:"image" %>
+				</div>
+				<div id="page">
+					<div id="content"><div class="ic"></div>
+						<div class="box">
+							<h2>Welcome to Axiom</h2>
+							<%= image_tag "pic1.jpg", class: "image alignleft" , width:"215",  height:"150" , alt:"" %>
+							<p>
+								This is <strong>Axiom</strong>, a free, fully standards-compliant CSS template by <a href="#">Free CSS Templates</a>. The images used in this template are from <a href="#">Fotogrph</a>. This free template is released under a <a href="#">Creative Commons Attributions 3.0</a> license, so you are pretty much free to do whatever you want with it (even use it commercially) provided you keep the footer credits intact. Aside from that, have fun with it :)
+							</p>
+							<br class="clearfix" />
+						</div>
+						<div class="box col1">
+							<h3>Posuere cras</h3>
+							<p>
+								Diam velit rutrum iaculis molestie massa dolor tortor. Imperdiet fringilla condimentum accumsan accumsan.
+							</p>
+							<ul class="list">
+								<li class="first"><a href="#">Semper lacinia nisl quisque</a></li>
+								<li><a href="#">Vulputate consectetur consequat augue</a></li>
+								<li><a href="#">Montes odio nulla lacus</a></li>
+								<li><a href="#">Natoque dolor curabitur augue</a></li>
+								<li class="last"><a href="#">Gravida imperdiet neque placerat</a></li>
+							</ul>
+						</div>
+						<div class="box col2">
+							<h3>Neque varius</h3> 
+							<%= image_tag "pic2.jpg", class: "image aligntop", width:"430", height:"155" , alt:"" %>
+							<p>
+								Rutrum quis ultricies nullam at purus accumsan penatibus. Malesuada penatibus non nulla quam rutrum. Imperdiet integer nascetur cursus. Quis felis adipiscing leo penatibus interdum ac fusce.
+							</p>
+						</div>
+						<br class="clearfix" />
+					</div>
+				</div>
+			</div>
+			<div id="page-bottom">
+				<div id="page-bottom-content">
+					<h3>Blandit sed luctus</h3>
+					<p>
+						Cras luctus mi posuere rutrum. Elementum ipsum semper nulla iaculis adipiscing leo ultrices. Libero erat vivamus sagittis volutpat aenean elit. Semper diam purus justo commodo amet. Laoreet dignissim nisl varius. Tempor consequat ridiculus porta proin convallis praesent curabitur. Ligula nisl facilisis lectus. Euismod lobortis orci ridiculus scelerisque. Phasellus tortor morbi sed felis proin. Elit non risus consectetur primis. Sapien libero pharetra mattis nisl praesent.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<p>Professional free web templates <a href="http://www.websitetemplatesonline.com" target="_blank">at www.websitetemplatesonline.com</a>. <a href="http://www.getjoomlatemplatesfree.com/" title="Joomla themes">Get Joomla Templates Free.com</a> - free Joomla templates.</p>
+			&copy; 2012 Untitled | Design by <a href="http://www.freecsstemplates.org/" rel="nofollow">FCT</a> | Images by <a href="#">Fotogrph</a>
+		</div>
+	</body>
 
-<%= yield %>
-
-</body>
 </html>
+<%= yield %>

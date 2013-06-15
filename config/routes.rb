@@ -1,5 +1,17 @@
 Cms::Application.routes.draw do
-  root :to => 'welcome#index'
+  resources :contacts
+
+
+  resources :pages
+
+
+  get "pages/home"
+
+  root :to => 'pages#home'
+  controller :pages do 
+    get 'home'
+    get 'admin'
+  end   
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -56,4 +68,5 @@ Cms::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+  get "/:id" => 'pages#show'
 end
